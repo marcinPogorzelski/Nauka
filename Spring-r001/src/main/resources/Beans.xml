@@ -7,7 +7,9 @@
 		<constructor-arg ref="sampleQuest"></constructor-arg>
 	</bean>
 	<bean class="com.mp.r001.classes.SampleQuest" id="sampleQuest"></bean>
-	<bean class="com.mp.r001.classes.Minstrell" id="minstrell"></bean>
+	<bean class="com.mp.r001.classes.Minstrell" id="minstrell">
+<!-- 	<constructor-arg ref="#{T.(System).out}"></constructor-arg> -->
+	</bean>
 	<aop:config>
 		<aop:aspect ref="minstrell">
 			<aop:pointcut expression="execution(* *.madeSomeQuests(..))" id="embark"/>
