@@ -12,6 +12,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes=CDPlayerConfig.class)
 public class CDPlayerTest {
 
+
+	
+	@Autowired
+	private MediaPlayer player;
+	
 	@Autowired
 	private CompactDisc cd;
 	
