@@ -16,7 +16,6 @@ public class MainApp {
 		
 		logger.info("Before madeSomeQuests() method ");
 		knight.madeSomeQuests();
-
 	}
 
 }
