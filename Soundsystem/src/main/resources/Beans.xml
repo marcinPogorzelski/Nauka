@@ -8,6 +8,13 @@
 	<bean id="compactDisc" class="com.mp.soundsystem.BlankDisc">
 		<constructor-arg value="Tytuł"></constructor-arg>
 		<constructor-arg value="Nazwa przykladowa wykonawcy"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Jeden</value>
+				<value>Dwa</value>
+				<value>Trzy</value>
+			</list>
+		</constructor-arg>
 	</bean>
 
 </beans>
