@@ -1,6 +1,8 @@
-package com.mp.reservations.data;
+package com.mp.reservations.interfaces;
 
 import java.util.List;
+
+import com.mp.reservations.data.User;
 
 public interface IUsersRepository {
 	
