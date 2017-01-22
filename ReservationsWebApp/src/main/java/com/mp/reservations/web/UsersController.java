@@ -23,12 +23,6 @@ public class UsersController {
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String users(Model model){
-		model.addAttribute(usersRepository.findUsers(Long.MAX_VALUE, 20));
-		return "users";
-	}
-	
-	@RequestMapping(method=RequestMethod.GET)
 	public List<User> users(){
 		return usersRepository.findUsers(Long.MAX_VALUE, 20);
 	}
