@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,7 +23,7 @@ public class UsersController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public List<User> users(){
-		return usersRepository.findUsers(Long.MAX_VALUE, 20);
+		return usersRepository.findUsers();
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.GET)

@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Strona glowna</h1>
-<a href="/users">Lista uzytkownikow</a><br/>
+<a href="${pageContext.request.contextPath}/users">Lista uzytkownikow</a><br/>
 <a href="/register">Dodaj uzytkownika</a>
 </body>
 </html>

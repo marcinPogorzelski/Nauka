@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista uzytkownikow</title>
 </head>
 <body>
 	<ul>
-		<c:forEach items="${users}" var="user">
+		<c:forEach items="${userList}" var="user">
 			<li id="user_<c:out value="user.id"/>">
 				<c:out value="${user.name}"></c:out>
 				<c:out value="${user.surname}"></c:out>
