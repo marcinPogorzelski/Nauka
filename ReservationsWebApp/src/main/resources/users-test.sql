@@ -1,0 +1,10 @@
+INSERT INTO USER (id, first_name, last_name) VALUES (1, 'Tomasz', 'Kowalski');
+INSERT INTO USER (id, first_name, last_name) VALUES (2, 'Jan', 'Wisniewski');
+INSERT INTO USER (id, first_name, last_name) VALUES (3, 'Adam', 'Tarnowski');
+INSERT INTO USER (id, first_name, last_name) VALUES (4, 'Piotr', 'Sadowski');
+INSERT INTO USER (id, first_name, last_name) VALUES (5, 'Anna', 'Kowalska');
+INSERT INTO USER (id, first_name, last_name) VALUES (6, 'Beata', 'Radomska');
+INSERT INTO USER (id, first_name, last_name) VALUES (7, 'Magdalena', 'Borowa');
+INSERT INTO USER (id, first_name, last_name) VALUES (8, 'Justyna', 'Marzec');
+INSERT INTO USER (id, first_name, last_name) VALUES (9, 'Halina', 'Gadomska');
+INSERT INTO USER (id, first_name, last_name) VALUES (10, 'Tomasz', 'Bak');

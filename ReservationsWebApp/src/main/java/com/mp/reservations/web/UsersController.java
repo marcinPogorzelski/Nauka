@@ -26,5 +26,10 @@ public class UsersController {
 	public List<User> users(){
 		return usersRepository.findUsers(Long.MAX_VALUE, 20);
 	}
+	
+	@RequestMapping(value="/register", method=RequestMethod.GET)
+	public String registerUser(){
+		return "registerForm";
+	}
 
 }

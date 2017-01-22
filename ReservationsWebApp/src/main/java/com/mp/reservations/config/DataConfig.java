@@ -14,11 +14,11 @@ public class DataConfig {
 
 	@Bean
 	public DataSource dataSource() {
-		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).addScript("schema.sql").build();
+		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).addScripts("schema.sql", "users-test.sql").build();
 	}
 
 	@Bean
-	public JdbcOperations jdbcTemplate(DataSource dataSource) {
+	public JdbcTemplate jdbcTemplate(DataSource dataSource) {
 		return new JdbcTemplate(dataSource);
 	}
 

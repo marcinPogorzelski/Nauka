@@ -7,10 +7,10 @@ public class User {
 	private final String surname;
 	
 	
-	public User(String name, String surname){
+	public User(Long id, String name, String surname){
 		this.name = name;
 		this.surname = surname;
-		this.id = null;
+		this.id = id;
 	}
 
 	public Long getId() {

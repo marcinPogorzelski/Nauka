@@ -22,9 +22,11 @@ public class UsersRestController {
 	
 	@RequestMapping(method=RequestMethod.GET, value={"/users"}, produces="application/json")
 	public List<User> getUsers(){
-		List<User> users = new ArrayList<>();
+		//TODO Implementacja metody pobieraj¹æa listê wyników z bazy danych
+		return usersRepository.findUsers();
+		/*List<User> users = new ArrayList<>();
 		users.add(new User("Tomasz", "Kowalski"));
-		return users;
+		return users;*/
 	}
 
 }
