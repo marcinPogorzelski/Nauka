@@ -13,22 +13,16 @@ import com.mp.reservations.interfaces.IUsersRepository;
 @Controller
 @RequestMapping("/users")
 public class UsersController {
-	
+
 	private IUsersRepository usersRepository;
-	
+
 	@Autowired
-	public UsersController(IUsersRepository usersRepository){
+	public UsersController(IUsersRepository usersRepository) {
 		this.usersRepository = usersRepository;
 	}
-	
-	@RequestMapping(method=RequestMethod.GET)
-	public List<User> users(){
+
+	@RequestMapping(method = RequestMethod.GET)
+	public List<User> users() {
 		return usersRepository.findUsers();
 	}
-	
-	@RequestMapping(value="/register", method=RequestMethod.GET)
-	public String registerUser(){
-		return "registerForm";
-	}
-
 }

@@ -5,16 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista uzytkownikow</title>
+<title>Dodaj nowego u¿ytkownika</title>
 </head>
 <body>
-	<ul>
-		<c:forEach items="${userList}" var="user">
-			<li id="user_<c:out value="user.id"/>">
-				<c:out value="${user.name}"></c:out>
-				<c:out value="${user.surname}"></c:out>
-			</li>
-		</c:forEach>
-	</ul>
+Tutaj bêdzie formularz
 </body>
 </html>
