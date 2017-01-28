@@ -16,7 +16,9 @@ public class UserRepository implements IUsersRepository {
 	private JdbcTemplate jdbcTemplate;
 	private static final String SQL_GET_ALL_USERS = "SELECT * FROM USER";
 	private static final String SQL_GET_SINGLE_USER = "SELECT * FROM USER WHERE id = ?";
-	private static final String SQL_DELETE_USER = "DELETE * FROM USER WHERE id = ?";
+	private static final String SQL_DELETE_USER = "DELETE FROM USER WHERE id = ?";
+	private static final String SQL_UPDATE_USER = "UPDATE USER SET first_name = ?, last_name = ? WHERE id = ?";
+	private static final String SQL_CREATE_USER = "INSERT INTO USER (first_name, last_name) VALUES (?, ?)";
 
 	public UserRepository(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
@@ -48,7 +50,7 @@ public class UserRepository implements IUsersRepository {
 
 	@Override
 	public void removeUser(Long id) {
-		//jdbcTemplate.
+		jdbcTemplate.update(SQL_DELETE_USER, new Object[] { id });
 
 	}
 
