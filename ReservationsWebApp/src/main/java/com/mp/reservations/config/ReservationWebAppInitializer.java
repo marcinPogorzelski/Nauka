@@ -1,5 +1,8 @@
 package com.mp.reservations.config;
 
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+
 import org.apache.log4j.Logger;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -22,6 +25,12 @@ public class ReservationWebAppInitializer extends AbstractAnnotationConfigDispat
 	protected String[] getServletMappings() {
 		LOGGER.info("Inside getServletMappings() method");
 		return new String[] { "/" };
+	}
+
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		super.onStartup(servletContext);
+		servletContext.setInitParameter("spring.profiles.active", "development");
 	}
 
 }

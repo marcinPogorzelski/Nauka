@@ -15,6 +15,8 @@ public class UserRepository implements IUsersRepository {
 
 	private JdbcTemplate jdbcTemplate;
 	private static final String SQL_GET_ALL_USERS = "SELECT * FROM USER";
+	private static final String SQL_GET_SINGLE_USER = "SELECT * FROM USER WHERE id = ?";
+	private static final String SQL_DELETE_USER = "DELETE * FROM USER WHERE id = ?";
 
 	public UserRepository(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
@@ -46,11 +48,17 @@ public class UserRepository implements IUsersRepository {
 
 	@Override
 	public void removeUser(Long id) {
-		// TODO Auto-generated method stub
+		//jdbcTemplate.
 
 	}
-	
-	public static class UserRowMapper implements RowMapper<User>{
+
+	@Override
+	public User findUser(Long id) {
+		User user = jdbcTemplate.queryForObject(SQL_GET_SINGLE_USER, new Object[] { id }, new UserRowMapper());
+		return user;
+	}
+
+	public static class UserRowMapper implements RowMapper<User> {
 
 		@Override
 		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -60,7 +68,7 @@ public class UserRepository implements IUsersRepository {
 			User user = new User(id, firstName, lastName);
 			return user;
 		}
-		
+
 	}
 
 }

@@ -12,5 +12,5 @@ public interface IUsersRepository {
 	void addUser(User user);
 	void updateUser(Long id, User user);
 	void removeUser(Long id);
-
+	User findUser(Long id);
 }
