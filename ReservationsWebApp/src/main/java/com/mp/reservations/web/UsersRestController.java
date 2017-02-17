@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,9 +39,11 @@ public class UsersRestController {
 		LOGGER.info("User with id = " + String.valueOf(id) + " has been removed.");
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT, value = "/user")
-	public void createUser(User user){
+	@RequestMapping(method = RequestMethod.POST, value = "/user")
+	public void createUser(@RequestBody User user){
 		//TODO Implement
+		usersRepository.addUser(user);
+		LOGGER.info(user.toString());
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/user/{id}")

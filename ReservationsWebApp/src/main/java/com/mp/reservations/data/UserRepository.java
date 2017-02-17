@@ -40,6 +40,7 @@ public class UserRepository implements IUsersRepository {
 	@Override
 	public void addUser(User user) {
 		// TODO Auto-generated method stub
+		jdbcTemplate.update(SQL_CREATE_USER, new Object[]{user.getName(), user.getSurname()});
 	}
 
 	@Override
